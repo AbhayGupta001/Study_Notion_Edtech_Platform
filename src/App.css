@@ -1,0 +1,158 @@
+/* write your css here */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body{
+    overflow-x: hidden;
+}
+*{
+    box-sizing: border-box;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 80px;
+    aspect-ratio: 1;
+    border: 10px solid #000;
+    box-sizing: border-box;
+    background: 
+      radial-gradient(farthest-side,#fff 98%,#0000) top,
+      radial-gradient(farthest-side,#fff 98%,#0000) top,
+      radial-gradient(farthest-side,#fff 98%,#0000) left,
+      radial-gradient(farthest-side,#fff 98%,#0000) right,
+      radial-gradient(farthest-side,#fff 98%,#0000) bottom,
+      #000;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    filter: blur(4px) contrast(10); 
+    animation: l19 2s infinite;
+  }
+  @keyframes l19 {
+    0%   {background-position:top,top,left,right,bottom}
+    25%  {background-position:right,top,left,right,bottom}
+    50%  {background-position:bottom,top,left,right,bottom}
+    75%  {background-position:left,top,left,right,bottom}
+    100% {background-position:top,top,left,right,bottom}
+  }
+
+.grad-blue{
+    background: linear-gradient(118deg, #1FA2FF -3.62%, #12D8FA 50.44%, #A6FFCB 104.51%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grad-orange{
+    background: linear-gradient(118deg, #FF512F -4.8%, #F09819 107.46%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grad-yellow{
+    background: linear-gradient(118deg, #E65C00 -6.05%, #F9D423 106.11%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grad-red{
+    background: linear-gradient(118deg, #833AB4 -2.4%, #FD1D1D 52.25%, #FCB045 106.89%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.code-block{
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: linear-gradient(112deg, rgba(14, 26, 45, 0.24) -1.4%, rgba(17, 30, 50, 0.38) 104.96%);
+    backdrop-filter: blur(26px);
+}
+
+.bg_homepage{
+    background: url('../src/assets/Images/bghome.svg');
+}
+
+.flexBox{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.select-card{
+    background-color: white;
+    box-shadow: 15px 15px 0px 0px#FFD60A;
+}
+
+.select-heading{
+    color: black;
+}
+
+.select-subheading{
+    color: #585D69;
+}
+
+.select-tag{
+    border-top: solid 1px #C5C7D4;
+    color: #0A5A72;
+}
+
+sup{
+    color: red;
+}
+
+.active{
+    color: #FFD60A;
+}
+
+::-webkit-scrollbar{
+    background-color: #000814;
+    width: 0.5vw;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #2C333F;
+    border: 1px solid white;
+    border-radius: 10%;
+}
+
+.profile::-webkit-scrollbar{
+    background-color: #000814;
+    width: 0.2vw;
+}
+
+.video::-webkit-scrollbar{
+    background-color: transparent;
+    width: 0.2vw;
+}
+
+.profile::-webkit-scrollbar-thumb{
+    background-color: #AFB2BF;
+    border: 1px solid #AFB2BF;
+    border-radius: 10%;
+    visibility: hidden;    
+}
+
+.profile:hover.profile::-webkit-scrollbar-thumb{
+    visibility: visible;
+}
+
+.dashed{
+    position: relative;
+    height: 14px;
+    overflow: hidden;
+}
+
+.dashed::after{
+    content: "------------------------------------------------------------";
+    letter-spacing: 5px;
+    font-weight: bold;
+    left: 0;
+    right: 0;
+}
+
+@media screen and (max-width:640px){
+    ::-webkit-scrollbar-thumb{
+        display: none;
+    }
+}
