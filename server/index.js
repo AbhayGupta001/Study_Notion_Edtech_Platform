@@ -24,7 +24,7 @@ app.use(cookieParser());
 app.use(
     cors({
         //link of front end from where request will be coming to the server
-        origin: "http://localhost:3000",
+        origin: "https://study-notion-edtech-platform-frontend.vercel.app/",
         credentials: true
     })
 );
