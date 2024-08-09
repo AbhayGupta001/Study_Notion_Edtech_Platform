@@ -44,9 +44,8 @@ const ProfilePictureSection = () => {
       const formData = new FormData;
       formData.append("imageFile",imageFile);
       // console.log(formData);
-      dispatch(updateDisplayPicture(token,formData)).then(()=>{
-        setLoading(false);
-      });
+      dispatch(updateDisplayPicture(token,formData))
+      setLoading(false);
 
     }catch (error) {
       console.log("ERROR MESSAGE - ", error.message);

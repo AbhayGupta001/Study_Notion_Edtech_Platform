@@ -79,7 +79,7 @@ const Footer = () => {
               Terms
             </p>
             <p className='text-[15px] text-richblack-400'>
-              Made with ❤️ CodeHelp © 2023 Studynotion
+              Made with ❤️ Abhay Gupta © 2023 Studynotion
             </p>
         </div>
     </div>

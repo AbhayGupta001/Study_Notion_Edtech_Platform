@@ -31,7 +31,9 @@ export function updateDisplayPicture(token , formData){
             console.log("UPDATE_DISPLAY_PICTURE_API RESPONSE....",err);
             toast.err("Could Not Update Display Picture");
         }
-        toast.dismiss(toastId);
+        finally{
+            toast.dismiss(toastId);
+        }
     }
 }
 
