@@ -19,9 +19,6 @@ const PORT = process.env.PORT || 5000;
 database.connect();
 cloudinaryConnect();
 
-app.use(express.json());
-app.use(cookieParser());
-app.use(cors());
 app.use((req, res, next) => {
     res.setHeader(
       "Access-Control-Allow-Origin",
@@ -42,6 +39,11 @@ app.use((req, res, next) => {
   
     next();
   });
+
+app.use(express.json());
+app.use(cookieParser());
+// app.use(cors());
+
 
 app.use(
     fileUpload({
