@@ -22,7 +22,7 @@ cloudinaryConnect();
 app.use((req, res, next) => {
     res.setHeader(
       "Access-Control-Allow-Origin",
-      "https://study-notion-edtech-platform-frontend.vercel.app/"
+      "https://study-notion-edtech-platform-frontend.vercel.app"
     );
     res.setHeader(
       "Access-Control-Allow-Methods",
