@@ -128,7 +128,7 @@ exports.signUp = async(req,res) =>{
             });
         } 
         //otp entered by the user is incorrect
-        else if(response[0].otp !== otp){
+        else if(response[0].otp != otp){
             return res.status(401).json({
                 success:false,
                 message:'Incorrect OTP. Please enter the correct OTP'
