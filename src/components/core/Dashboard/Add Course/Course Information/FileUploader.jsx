@@ -108,13 +108,13 @@ const FileUploader = ({
               : (
                 <div className='w-full flex flex-col items-center'
                   {...getRootProps()}>
-                  <input {...getInputProps()} ref={inputRef}/>
+                  <input {...getInputProps()}/>
                   <div className="grid aspect-square w-14 place-items-center rounded-full bg-pure-greys-800">
                     <FiUploadCloud className="text-2xl text-yellow-50"/>
                   </div>
                   <p className="mt-2 max-w-[200px] text-center text-sm text-richblack-200">
                     Drag and drop an {!video ? "image" : "video"}, or click to{" "}
-                    <span className="font-semibold text-yellow-50" onClick={open}>Browse</span> a
+                    <span className="font-semibold text-yellow-50">Browse</span> a
                     file
                   </p>
                   <ul className="mt-10 flex max-xxs:flex-col sm:list-disc justify-between xxs:space-x-12 text-center  text-xs text-richblack-200">
