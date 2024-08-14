@@ -34,7 +34,7 @@ const FileUploader = ({
     }
   }
 
-  const { getRootProps , getInputProps , isDragActive} = useDropzone({
+  const { getRootProps , getInputProps, open , isDragActive} = useDropzone({
     accept: !video
       ? {"image/*": [".jpeg",".jpg",".png"]}
       : {"video/*": [".mp4"]},
@@ -114,7 +114,7 @@ const FileUploader = ({
                   </div>
                   <p className="mt-2 max-w-[200px] text-center text-sm text-richblack-200">
                     Drag and drop an {!video ? "image" : "video"}, or click to{" "}
-                    <span className="font-semibold text-yellow-50">Browse</span> a
+                    <span className="font-semibold text-yellow-50" onClick={open}>Browse</span> a
                     file
                   </p>
                   <ul className="mt-10 flex max-xxs:flex-col sm:list-disc justify-between xxs:space-x-12 text-center  text-xs text-richblack-200">
